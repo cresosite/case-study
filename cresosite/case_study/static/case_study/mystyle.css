@@ -1,0 +1,45 @@
+.jumbotron {
+  padding: 2rem 3rem;
+  background-color: #e9ecef;
+  border-radius: .9rem;
+  width: 60%;
+  margin: auto;
+}
+
+.about {
+background-color: #ccb683;;
+margin: auto;
+padding: 10px;
+width: 68%;
+border-radius: 20px;
+color: black;
+}
+
+#case_study {
+background-color: #e9ecef;
+border-radius: 10px;
+padding: 25px;
+margin: auto;
+width: 52%;
+}
+
+.my-1{
+  background-color: black;
+}
+/* this is for forms asterisked */
+label.required::after {
+    content: ' *';
+    color: red;
+}
+
+.case_one{
+  background: url('/static/case_study/seafront.jpg');
+}
+
+#index{
+  background: url('/static/case_study/cityscape3.jpg');
+}
+
+#about_body {
+  background-color: ;
+}

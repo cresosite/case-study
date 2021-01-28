@@ -1,0 +1,17 @@
+{% extends 'case_study/base.html' %}
+
+{% block content %}
+<body id="index">
+  <br>
+<div class="jumbotron">
+
+<h4><strong><u>Supporting Creativity in engineering design</u></strong></h4>
+<h6 class="" style="text-align:justify">What would sustain the future economy? - ideas! We are working towards increasing the creativity consciousness of design engineers in the fourth industrial revolution. As part of this effort, we are conducting a short online case study - the reason, probably, you are here. Information from this case study would be useful in an ongoing research to support creativity in engineering design, in academia and industry.</h6>
+<hr class="my-4">
+<p style="text-align:justify">Please take a moment to sign up for the case study. You will be redirected to the case study page after sign up. If you have previously signed up, you can login. Thank you.</p>
+<a class="btn btn-secondary btn-lg" href="{% url 'register' %}" role="button">Sign up</a>
+
+</div>
+
+</body>
+{% endblock %}

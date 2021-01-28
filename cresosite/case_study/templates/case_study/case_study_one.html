@@ -1,0 +1,48 @@
+{% extends 'case_study/base.html' %}
+
+{% block content %}
+<body class="case_one">
+<div id="case_study">
+{% if user.is_authenticated %}
+  {% if user.response.hand %}
+  <h4><strong>Hi {{ user.username.capitalize }}, </strong></h4>
+  <p><strong>Thank you for taking part in our case study.</strong></p>
+  <p>If you signed up to try our computational creativity tool: Pro-Explora, you'll be notified by email when the trial begins. Please ensure you provided a valid email address or go to Edit Profile to update your email address.</p>
+  {% else %}
+
+  <h4><strong>Hi {{ user.username.capitalize }}, </strong></h4>
+  <p><strong>Please proceed with the case study.</strong></p>
+  <p>Questions 1 or 2, and 3 - 6 (asterisked) are required. </p>
+  <hr class="my-1">
+  <br>
+
+  <form class="" method="POST">
+    {% csrf_token %}
+
+    {% if form.errors %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        <p>Your Form has errors...</p>
+        {% for field in form %}
+          {% if field.errors %}
+            {{ field.errors }}
+          {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    {{ form.as_p }}
+
+  <input type="submit" class="btn btn-secondary" value="Submit">
+
+  </form>
+
+</div>
+</body>
+
+{% endif %}
+{% endif %}
+
+{% endblock %}
